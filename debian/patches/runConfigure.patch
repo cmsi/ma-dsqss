@@ -1,0 +1,34 @@
+--- a/runConfigure.sh
++++ b/runConfigure.sh
+@@ -3,8 +3,8 @@
+ #====================
+ #====================
+ PARALLEL=YES
+-#COMPILER=GNU
+-COMPILER=INTEL
++COMPILER=GNU
++#COMPILER=INTEL
+ #COMPILER=FUJITSU
+ 
+ ######################################################
+@@ -18,8 +18,8 @@
+     
+     case $PARALLEL in
+         YES)
+-        CXX=mpic++
+-        CC=mpic++
++        CXX=mpicxx
++        CC=mpicxx
+         MULTI=-DMULTI;;
+         NO)
+         CXX=g++
+@@ -95,8 +95,5 @@
+ ./runCtest "$ROOTDIR" "$CC" "$CXX" "$LIBS" "$OPT" "$MULTI" "$CRSS"
+ cd $ROOTDIR
+ 
+-echo "WORM_HOME=$ROOTDIR"     >  $BINDIR/wormvars.sh
+-echo "export WORM_HOME"       >> $BINDIR/wormvars.sh
+-echo "PATH="'$WORM_HOME/bin:$PATH'>> $BINDIR/wormvars.sh
+-echo "PATH="'$WORM_HOME/bin/plot:$PATH'>> $BINDIR/wormvars.sh
++echo "PATH="'/usr/bin/plot:$PATH'>> $BINDIR/wormvars.sh
+ echo "export PATH"            >> $BINDIR/wormvars.sh

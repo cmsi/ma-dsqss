@@ -1,0 +1,11 @@
+--- a/tool/inpgene-7.sh
++++ b/tool/inpgene-7.sh
+@@ -636,7 +636,7 @@
+     PRODDIR=$OD
+ fi
+ 
+-ODIR=$rootpath/DATA/$OD
++ODIR=$OD
+ 
+ if [ ! -d $ODIR ]; then
+ mkdir -p $ODIR

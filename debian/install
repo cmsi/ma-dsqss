@@ -1,1 +1,3 @@
-src/[0-9]* /usr/share/feram/example
+bin/* usr/bin
+tool/* usr/share/dsqss/tool
+samples/* usr/share/dsqss/samples
