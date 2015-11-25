@@ -1,3 +1,9 @@
+dsqss (1.1.17+pv1.1.2-2) wheezy; urgency=low
+
+  * Changed path for plot files
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Wed, 25 Nov 2015 17:26:16 +0900
+
 dsqss (1.1.17+pv1.1.2-1) wheezy; urgency=low
 
   * Initial release for 1.1.17+pv1.1.2
