@@ -1,1 +1,1 @@
-rm -f debian/dsqss* debian/files
+rm -rf debian/dsqss* debian/files

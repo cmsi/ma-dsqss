@@ -22,7 +22,7 @@
          MULTI=-DMULTI;;
          NO)
          CXX=g++
-@@ -95,8 +95,5 @@
+@@ -95,8 +95,7 @@
  ./runCtest "$ROOTDIR" "$CC" "$CXX" "$LIBS" "$OPT" "$MULTI" "$CRSS"
  cd $ROOTDIR
  
@@ -30,5 +30,8 @@
 -echo "export WORM_HOME"       >> $BINDIR/wormvars.sh
 -echo "PATH="'$WORM_HOME/bin:$PATH'>> $BINDIR/wormvars.sh
 -echo "PATH="'$WORM_HOME/bin/plot:$PATH'>> $BINDIR/wormvars.sh
-+echo "PATH="'/usr/bin/plot:$PATH'>> $BINDIR/wormvars.sh
- echo "export PATH"            >> $BINDIR/wormvars.sh
+-echo "export PATH"            >> $BINDIR/wormvars.sh
++echo "WORM_HOME=/usr/share/dsqss"         >  $BINDIR/wormvars.sh
++echo "export WORM_HOME"                   >> $BINDIR/wormvars.sh
++echo "PATH="'/usr/share/dsqss/plot:$PATH' >> $BINDIR/wormvars.sh
++echo "export PATH"                        >> $BINDIR/wormvars.sh
