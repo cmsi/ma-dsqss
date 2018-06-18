@@ -11,14 +11,12 @@
  #COMPILER=FUJITSU
  
  ######################################################
-@@ -18,8 +18,8 @@
-     
+@@ -19,7 +19,7 @@
      case $PARALLEL in
          YES)
--        CXX=mpic++
--        CC=mpic++
-+        CXX=mpicxx
-+        CC=mpicxx
+         CXX=mpicxx
+-        CC=mpicxx
++        CC=mpicc
          MULTI=-DMULTI;;
          NO)
          CXX=g++

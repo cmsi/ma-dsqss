@@ -22,7 +22,7 @@ export DH_OPTIONS
 
 override_dh_auto_clean:
 	if [ -f dsqss/dsqss-1.1.17/Makefile ]; then cd dsqss/dsqss-1.1.17; make; fi
-	if [ -f pmwa/pmwa-1.1.2/Makefile ]; then cd pmwa/pmwa-1.1.2; make; fi
+	if [ -f pmwa/pmwa-1.1.3/Makefile ]; then cd pmwa/pmwa-1.1.2; make; fi
 	rm -rf bin
 
 override_dh_auto_configure:

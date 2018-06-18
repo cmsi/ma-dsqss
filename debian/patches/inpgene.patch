@@ -1,10 +1,10 @@
---- a/tool/inpgene-7.sh
-+++ b/tool/inpgene-7.sh
+--- a/tool/inpgene-8.sh
++++ b/tool/inpgene-8.sh
 @@ -636,7 +636,7 @@
      PRODDIR=$OD
  fi
  
--ODIR=$rootpath/DATA/$OD
+-ODIR=$PWD/DATA/$OD
 +ODIR=$OD
  
  if [ ! -d $ODIR ]; then
