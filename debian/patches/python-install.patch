@@ -1,0 +1,18 @@
+--- a/tool/cmake/install.sh.in
++++ b/tool/cmake/install.sh.in
+@@ -2,15 +2,6 @@
+ 
+ cd @CMAKE_CURRENT_BINARY_DIR@
+ 
+-if ! @PYTHON_EXECUTABLE@ -m pip --version >/dev/null 2>/dev/null ;then
+-  set -e
+-  wget https://bootstrap.pypa.io/get-pip.py -O get-pip.py
+-  PIP_USER=0 @PYTHON_EXECUTABLE@ get-pip.py --prefix=@CMAKE_INSTALL_PREFIX@
+-fi
+-
+-set -e
+-PIP_USER=0 @PYTHON_EXECUTABLE@ -m pip install -U pip --prefix=@CMAKE_INSTALL_PREFIX@ 
+-PIP_USER=0 @PYTHON_EXECUTABLE@ -m pip install wheel --prefix=@CMAKE_INSTALL_PREFIX@ --no-warn-script-location
+ DSQSS_VERSION=$(@PYTHON_EXECUTABLE@ setup.py --version)
+ @PYTHON_EXECUTABLE@ setup.py bdist_wheel --universal
+ mkdir -p temp

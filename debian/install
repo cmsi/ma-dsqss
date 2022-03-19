@@ -1,4 +1,0 @@
-bin/wormvars.sh bin/dla* bin/hamgen* bin/inpgene* bin/lattgene* bin/runmerge* usr/bin
-bin/plot/* usr/share/dsqss/plot
-tool/* usr/share/dsqss/tool
-samples/* usr/share/dsqss/samples

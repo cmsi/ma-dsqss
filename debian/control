@@ -2,7 +2,7 @@ Source: dsqss
 Section: scientific
 Priority: extra
 Maintainer: Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>
-Build-Depends: debhelper (>= 8.0.0), autotools-dev
+Build-Depends: debhelper (>= 8.0.0), build-essential, mpi-default-dev, python3-pip, python3-numpy, python3-scipy, python3-toml
 Standards-Version: 3.9.3
 Homepage: https://github.com/qmc/dsqss
 
