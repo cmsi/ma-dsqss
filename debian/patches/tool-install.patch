@@ -16,7 +16,7 @@
  DSQSS_VERSION=$(@PYTHON_EXECUTABLE@ setup.py --version)
  @PYTHON_EXECUTABLE@ setup.py bdist_wheel --universal
  mkdir -p temp
-@@ -18,6 +9,6 @@
+@@ -18,6 +9,8 @@
  
  # To reinstall dsqss forcely, remove old dsqss package
  # `pip uninstall dsqss` removes ALL libraries and binaries 
@@ -25,6 +25,8 @@
  
 -PIP_USER=0 @PYTHON_EXECUTABLE@ -m pip install ../dist/dsqss-${DSQSS_VERSION}-py2.py3-none-any.whl --prefix=@CMAKE_INSTALL_PREFIX@ --no-warn-script-location
 +PIP_USER=0 @PYTHON_EXECUTABLE@ -m pip install ../dist/dsqss-${DSQSS_VERSION}-py2.py3-none-any.whl --prefix=${DESTDIR}@CMAKE_INSTALL_PREFIX@ --no-warn-script-location
++mkdir -p ${DESTDIR}@CMAKE_INSTALL_PREFIX@/lib/python@python_version_mm@/dist-packages/
++mv ${DESTDIR}@CMAKE_INSTALL_PREFIX@/lib/python@python_version_mm@/site-packages/dsqss* ${DESTDIR}@CMAKE_INSTALL_PREFIX@/lib/python@python_version_mm@/dist-packages/
 --- a/tool/CMakeLists.txt
 +++ b/tool/CMakeLists.txt
 @@ -7,10 +7,6 @@
