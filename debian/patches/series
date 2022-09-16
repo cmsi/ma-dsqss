@@ -1,1 +1,2 @@
-python-install.patch
+sample-install.patch
+tool-install.patch

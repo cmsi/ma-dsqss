@@ -1,3 +1,9 @@
+dsqss (2.0.4-2) unstable; urgency=low
+
+  * Fix install path of python script and example
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Fri, 16 Sep 2022 10:28:11 +0900
+
 dsqss (2.0.4-1) unstable; urgency=low
 
   * New upstream (2.0.4)
